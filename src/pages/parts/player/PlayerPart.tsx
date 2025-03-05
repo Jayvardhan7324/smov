@@ -62,7 +62,6 @@ export function PlayerPart(props: PlayerPartProps) {
             <Player.BackLink url={props.backUrl} />
             <span className="text mx-3 text-type-secondary">/</span>
             <Player.Title />
-            <Player.BookmarkButton />
           </div>
           <div className="text-center hidden xl:flex justify-center items-center">
             <Player.EpisodeTitle />
