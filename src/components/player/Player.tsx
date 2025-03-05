@@ -1,5 +1,6 @@
 export * from "./atoms";
 export * from "./base/Container";
+export * from "./base/TopControls";
 export * from "./base/CenterControls";
 export * from "./base/BottomControls";
 export * from "./base/BlackOverlay";
