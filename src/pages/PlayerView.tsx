@@ -45,7 +45,6 @@ export function RealPlayerView() {
     setShouldStartFromBeginning,
   } = usePlayer();
   const { setPlayerMeta, scrapeMedia } = usePlayerMeta();
-  const backUrl = useLastNonPlayerLink();
 
   const paramsData = JSON.stringify({
     media: params.media,
@@ -91,7 +90,6 @@ export function RealPlayerView() {
   );
 
   return (
-    <PlayerPart backUrl={backUrl} onMetaChange={metaChange}>
       {status === playerStatus.IDLE ? (
         <MetaPart onGetMeta={setPlayerMeta} />
       ) : null}
