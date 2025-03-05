@@ -11,7 +11,6 @@ import { ScrapingPartInterruptButton } from "./ScrapingPart";
 
 export interface PlayerPartProps {
   children?: ReactNode;
-  backUrl: string;
   onLoad?: () => void;
   onMetaChange?: (meta: PlayerMeta) => void;
 }
