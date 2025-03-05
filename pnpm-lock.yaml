@@ -40,7 +40,7 @@ importers:
         specifier: ^0.7.2
         version: 0.7.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@movie-web/providers':
-        specifier: github:Jayvardhan7324/smov-providers
+        specifier: github:Jayvardhan7324/smov-providers/tree/production
         version: https://codeload.github.com/Jayvardhan7324/smov-providers/tar.gz/production
       '@noble/hashes':
         specifier: ^1.5.0
