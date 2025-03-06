@@ -30,7 +30,8 @@ import { Layout } from "@/setup/Layout";
 import { useHistoryListener } from "@/stores/history";
 import { LanguageProvider } from "@/stores/language";
 
-
+const DeveloperPage = lazy(() => import("@/pages/DeveloperPage"));
+const TestView = lazy(() => import("@/pages/developer/TestView"));
 const PlayerView = lazyWithPreload(() => import("@/pages/PlayerView"));
 const SettingsPage = lazyWithPreload(() => import("@/pages/Settings"));
 
@@ -161,6 +162,16 @@ function App() {
               </Suspense>
             }
           />
+          {/* admin routes */}
+          <Route path="/admin" element={<AdminPage />} />
+          {/* other */}
+          <Route path="/dev" element={<DeveloperPage />} />
+          {/* developer routes that can abuse workers are disabled in production */}
+          {process.env.NODE_ENV === "development" ? (
+            <Route path="/dev/test" element={<TestView />} />
+          ) : null}
+          <Route path="*" element={<NotFoundPage />} />
+        </Routes>
       )}
       {showDowntime && (
         <MaintenancePage onHomeButtonClick={handleButtonClick} />
