@@ -1,3 +1,4 @@
+
 import { ReactNode } from "react";
 
 import { BrandPill } from "@/components/layout/BrandPill";
@@ -11,6 +12,7 @@ import { ScrapingPartInterruptButton } from "./ScrapingPart";
 
 export interface PlayerPartProps {
   children?: ReactNode;
+  backUrl: string;
   onLoad?: () => void;
   onMetaChange?: (meta: PlayerMeta) => void;
 }
@@ -58,6 +60,8 @@ export function PlayerPart(props: PlayerPartProps) {
       <Player.TopControls show={showTargets}>
         <div className="grid grid-cols-[1fr,auto] xl:grid-cols-3 items-center">
           <div className="flex space-x-3 items-center">
+            <Player.BackLink url={props.backUrl} />
+            <span className="text mx-3 text-type-secondary">/</span>
             <Player.Title />
           </div>
           <div className="text-center hidden xl:flex justify-center items-center">
