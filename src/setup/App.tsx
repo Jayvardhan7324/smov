@@ -1,3 +1,8 @@
+// Remove these two problematic imports:
+// import VideoTesterView from "@/pages/developer/VideoTesterView";
+// import TestView from "@/pages/developer/TestView";
+
+// Keep all other imports from your original file
 import { ReactElement, Suspense, lazy, useEffect, useState } from "react";
 import { lazyWithPreload } from "react-lazy-with-preload";
 import {
@@ -9,6 +14,7 @@ import {
   useParams,
 } from "react-router-dom";
 
+// Add an empty line between import groups as required by your linter
 import { convertLegacyUrl, isLegacyUrl } from "@/backend/metadata/getmeta";
 import { generateQuickSearchMediaUrl } from "@/backend/metadata/tmdb";
 import { useOnlineListener } from "@/hooks/usePing";
